@@ -1,11 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class main {
+    public static void main(String[] args) {
+        System.out.println("Система расчета стоимости топлива");
+
+        int fuelType = 90;
+        int amount = -50;
+        double fuel92price = 60.2;
+        double fuel95price = 67.33;
+
+        double fuelPrice = 0;
+        if(fuelType == 92){
+            fuelPrice = fuel92price;
+        }
+        else if(fuelType == 95){
+            fuelPrice = fuel95price;
+                    }
+        else
+            System.out.println("Указан неверный тип топлива");
+        if (amount < 1){
+            System.out.println("Указано слишком малое значение топлива");
+            amount = 0;
+        }
+        System.out.println("Цена выбранного топлива: "+fuelPrice+" рублей");
+        double totalPrice = fuelPrice * amount;
+        System.out.println("Общая стоимость: "+totalPrice+" рублей");
+    }
+}
